@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+}
+
+header {
+    background-color: rgb(236, 178, 18);
+    position: relative;
+}
+
+.header-img {
+    position: absolute;
+    right: -50px;
+    top: -10px;
+}
+
+.header-img img {
+    width: 100px;
+}
+
+.ingredients-item {
+    display: flex;
+    align-items: center;
+}
+
+.ingredients-img {
+    width: 20px;
+}
+
+.column {
+    display: inline-block;
+}
+
+.add {
+    color: red;
+}
+
+.button {
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 178, 18);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(214, 1, 114);
+    color: white;
+}
