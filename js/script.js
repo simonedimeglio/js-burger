@@ -1,3 +1,5 @@
+alert('Benvenuto a Los Pollos Hermanos, solo per oggi puoi approfittare del codice sconto HERMANOS10 per ottenere il 10% di sconto!')
+
 // Dichiaro la variabile relativa al button per il calcolo
 var createSum = document.getElementById('button');
 

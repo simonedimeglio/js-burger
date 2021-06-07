@@ -5,26 +5,32 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
-        <title>Los Pollos Hermanos</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">         <title>Los Pollos Hermanos</title>
     </head>
     <body>
-        <div class="container">
+        <div class="main-container">
             <header>
-                <h1>Los Pollos Hermanos Burgers</h1>
+                <div class="container">
+                    <h1>Los Pollos Hermanos Burgers</h1>
                 <div class="header-img"><img src="./img/burger-top.png" alt="burger-logo"></div>
+                </div>
+                
             </header>
 
             <main>
+                <div class="container">
                     <div class="burger-name">Classic Burger</div>
                     <div class="ingredients-container">
                         <h3>Ingredients</h3>
                         <form>
                             
-                            <div class="column">
+                            <div class="column-1">
                                 <div class="ingredients-item">
                                     <div class="ingredients-img"><img src="./img/cheese.svg" alt="cheese"></div>
                                     <label for="cheese">Cheese</label>
-                                    <input type="checkbox" id="cheese" class="sum-check" value="2">
+                                    <input type="checkbox" id="cheese" class="sum-check" value="1" step="any">
                                     <div class="add">Add</div>
                                 </div>
                                 <div class="ingredients-item">
@@ -36,16 +42,16 @@
                                 <div class="ingredients-item">
                                     <div class="ingredients-img"><img src="./img/ketchup.svg" alt="ketchup"></div>
                                     <label for="ketchup">Ketchup</label>
-                                    <input type="checkbox" id="ketchup" class="sum-check" value="2">
+                                    <input type="checkbox" id="ketchup" class="sum-check" value="3">
                                     <div class="add">Add</div>
                                 </div>
                             </div>
 
-                            <div class="column">
+                            <div class="column-2">
                                 <div class="ingredients-item">
                                     <div class="ingredients-img"><img src="./img/lettuce.svg" alt="lettuce"></div>
                                     <label for="lettuce">Lettuce</label>
-                                    <input type="checkbox" id="lettuce" class="sum-check" value="2">
+                                    <input type="checkbox" id="lettuce" class="sum-check" value="1">
                                     <div class="add">Add</div>
                                 </div>
                                 <div class="ingredients-item">
@@ -57,7 +63,7 @@
                                 <div class="ingredients-item">
                                     <div class="ingredients-img"><img src="./img/tomato.svg" alt="tomato"></div>
                                     <label for="tomato">Tomato</label>
-                                    <input type="checkbox" id="tomato" class="sum-check" value="2">
+                                    <input type="checkbox" id="tomato" class="sum-check" value="1">
                                     <div class="add">Add</div>
                                 </div>
                             </div>
@@ -73,12 +79,14 @@
                         <div id="button">Calculate</div>
 
                     </div>
+                </div>
+                    
             </main>
             <footer>
                 <div class="price-txt">Your Price</div>
                 <div id="price-number"></div>
             </footer>
-        </div>   
+        </div>
         <script src="js/script.js"></script>
     </body>
 </html>
