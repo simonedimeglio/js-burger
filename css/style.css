@@ -39,7 +39,7 @@ header h1 {
     width: 130px;
 }
 
-.burger-name {
+#burger-name {
     font-size: 20px;
     margin-bottom: 20px;
 }
