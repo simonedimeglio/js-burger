@@ -1,8 +1,13 @@
+// Alert di benvenuto in cui dichiaro il codice sconto (Gentile vero?)
 alert('Benvenuto a Los Pollos Hermanos, solo per oggi puoi approfittare del codice sconto HERMANOS10 per ottenere il 10% di sconto!')
+
+// Dichiaro la variabile per il custom name del burger, ricavandola da prompt
 var burgerName = prompt('Inserisci il nome del tuo burger');
 
+// Stampo subito il nome del burger in html
 document.getElementById("burger-name").innerHTML = 'The ' + burgerName + ' Burger';
-// Dichiaro la variabile relativa al button per il calcolo
+
+// Dichiaro la variabile relativa al button per il calcolo del prezzo
 var createSum = document.getElementById('button');
 
 // Dichiaro la variabile per la stampa del prezzo finale
@@ -26,7 +31,7 @@ createSum.addEventListener('click', function () {
 
         if (checkNum[i].checked) {
             // Aggiungo il costo alla cifra iniziale del burger
-            resultSumInt += parseInt(checkNum[i].value)
+            resultSumInt += parseFloat(checkNum[i].value)
         }
 
         
