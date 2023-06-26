@@ -1,49 +1,46 @@
-// Alert di benvenuto in cui dichiaro il codice sconto (Gentile vero?)
-alert('Benvenuto a Los Pollos Hermanos, solo per oggi puoi approfittare del codice sconto HERMANOS10 per ottenere il 10% di sconto!')
+// Dichiaro il codice sconto come costante
+const discountCode = "HERMANOS10";
 
-// Dichiaro la variabile per il custom name del burger, ricavandola da prompt
-var burgerName = prompt('Inserisci il nome del tuo burger');
+// Alert di benvenuto con il codice sconto
+alert("Codice sconto: " + discountCode);
 
-// Stampo subito il nome del burger in html
-document.getElementById("burger-name").innerHTML = 'The ' + burgerName + ' Burger';
+// Ottengo il nome del burger dal prompt
+var burgerName = prompt("Inserisci il nome del tuo burger");
 
-// Dichiaro la variabile relativa al button per il calcolo del prezzo
-var createSum = document.getElementById('button');
+// Stampo il nome del burger nell'elemento HTML
+document.getElementById("burger-name").textContent =
+	"The " + burgerName + " Burger";
 
-// Dichiaro la variabile per la stampa del prezzo finale
-var resultSumElement = document.getElementById('price-number');
+// Ottengo il riferimento al pulsante per il calcolo del prezzo
+var createSum = document.getElementById("button");
 
-// Dichiaro la variabile per lo sconto
-var input = document.getElementById('discount');
+// Ottengo il riferimento all'elemento per la stampa del prezzo finale
+var resultSumElement = document.getElementById("price-number");
 
-// Funzione al click del button
-createSum.addEventListener('click', function () {
+// Ottengo il riferimento all'input del codice sconto
+var input = document.getElementById("discount");
 
-    // Inizializzo il costo del burger
-    var resultSumInt = 4.50;
+// Funzione al click del pulsante
+createSum.addEventListener("click", function () {
+	// Inizializzo il costo del burger
+	var resultSumInt = 4.5;
 
-    // Prendo in considerazione gli ingredienti
-    var checkNum = document.getElementsByClassName('sum-check');
+	// Prendo in considerazione gli ingredienti
+	var checkNum = document.getElementsByClassName("sum-check");
 
-    // Verifico gli ingredienti che ho selezionato
-    for (var i = 0; i < checkNum.length; i++) {
+	// Calcolo il costo totale del burger in base agli ingredienti selezionati
+	for (var i = 0; i < checkNum.length; i++) {
+		if (checkNum[i].checked) {
+			resultSumInt += parseFloat(checkNum[i].value);
+		}
+	}
 
+	// Verifico se il codice sconto è applicato
+	if (input.value === discountCode) {
+		// Applico lo sconto del 10%
+		resultSumInt *= 0.9;
+	}
 
-        if (checkNum[i].checked) {
-            // Aggiungo il costo alla cifra iniziale del burger
-            resultSumInt += parseFloat(checkNum[i].value)
-        }
-
-        
-    }
-
-    // Verifico se il codice sconto è applicato
-    if (input.value === "HERMANOS10") {
-        // Applico lo sconto del 10%
-        resultSumInt = resultSumInt - (resultSumInt * 10 / 100);
-    }
-
-    // Stampo il risultato
-    resultSumElement.innerHTML = resultSumInt.toFixed(2) + '€';
-
-})
+	// Stampo il risultato formattato come prezzo
+	resultSumElement.textContent = resultSumInt.toFixed(2) + "€";
+});
